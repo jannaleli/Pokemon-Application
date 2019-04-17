@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pokemon View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PokemonViewController" customModule="pokemon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DRJ-zz-Ffg">
+                                <rect key="frame" x="0.0" y="61" width="375" height="606"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IUK-z3-DvP">
+                                    <size key="itemSize" width="128" height="138"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PokemonCell" reuseIdentifier="PokemonCell" id="9W2-gu-ukc" customClass="PokemonCell" customModule="pokemon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="138"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="138"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="etr-dJ-GgQ">
+                                                    <rect key="frame" x="13" y="9" width="102" height="119"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="etr-dJ-GgQ" secondAttribute="bottom" constant="10" id="0ot-Ep-pe4"/>
+                                            <constraint firstAttribute="trailing" secondItem="etr-dJ-GgQ" secondAttribute="trailing" constant="13" id="PH4-ME-mhF"/>
+                                            <constraint firstItem="etr-dJ-GgQ" firstAttribute="leading" secondItem="9W2-gu-ukc" secondAttribute="leading" constant="13" id="Qfi-YV-tri"/>
+                                            <constraint firstItem="etr-dJ-GgQ" firstAttribute="top" secondItem="9W2-gu-ukc" secondAttribute="top" constant="9" id="gma-8m-RSU"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageCell" destination="etr-dJ-GgQ" id="Qe5-aq-dyd"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="REq-tL-U1s"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hI9-nV-I0z"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DRJ-zz-Ffg" secondAttribute="trailing" id="8t7-Lx-fy1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DRJ-zz-Ffg" secondAttribute="bottom" id="NZf-6V-nvG"/>
+                            <constraint firstItem="DRJ-zz-Ffg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SFr-gH-qUR"/>
+                            <constraint firstItem="DRJ-zz-Ffg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="SjD-sA-ThV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectioView" destination="DRJ-zz-Ffg" id="ZV3-ZV-dOu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.799999999999997" y="145.27736131934034"/>
+        </scene>
+    </scenes>
+</document>
